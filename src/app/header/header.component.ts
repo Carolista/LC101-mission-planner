@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  missionName: string = "Mars 2030";
-  rocketName: string = "Plasma Max";
+  missionName: string = "Gallifrey 2024";
+  rocketName: string = "TARDIS X";
   editingMission: boolean = false;
+  editingRocketName: boolean = false;
   
   constructor() { }
 
@@ -19,6 +20,10 @@ export class HeaderComponent implements OnInit {
   updateMission(updatedName: string) {
     this.missionName = updatedName;
     this.editingMission = false;
+  }
+  updateRocketName(updatedName: string) {
+    this.rocketName = updatedName;
+    this.editingRocketName = false;
   }
 
 }

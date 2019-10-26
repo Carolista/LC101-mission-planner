@@ -9,8 +9,6 @@ export class CrewComponent implements OnInit {
 
     inCrew: boolean = false; // use this instead?
     crew: object[] = [];
-    showPhoto: boolean = false;
-    currentPhoto: string = "";
 
     candidates: object[] = [
         {name: "Sally Ride", photo: 'https://handlers.education.launchcode.org/static/images/sally-ride.jpg'},
@@ -26,32 +24,14 @@ export class CrewComponent implements OnInit {
 
     ngOnInit() { }
 
-    isCrewMember(member): boolean {
-        if (this.crew.includes(member)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     moveCrewMember(member): any {
-        if (!this.isCrewMember(member) && this.crew.length < 3) {
+        if (!this.crew.includes(member) && this.crew.length < 3) {
             this.crew.push(member);
-        } else if (this.isCrewMember(member)) {
+        } else if (this.crew.includes(member)) {
             this.crew.splice(this.crew.indexOf(member),1);
         } else {
             alert("Crew complement at maximum");
         }
-    }
-
-    nameMouseover(astronaut): any {
-        this.showPhoto = true;
-        this.currentPhoto = this.crew[astronaut]['photo'];
-    }
-
-    nameMouseout(): any {
-        this.showPhoto = false;
-        this.currentPhoto = "";
     }
 
 }

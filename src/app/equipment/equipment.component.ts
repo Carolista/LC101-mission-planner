@@ -64,13 +64,27 @@ export class EquipmentComponent implements OnInit {
         }
     }
 
+    removeItem(item): any {
+        this.cargoHold.splice(this.cargoHold.indexOf(item),1);
+    }
+
     emptyHold(): any {
         this.cargoHold = [];
         this.cargoMass = 0;
     }
 
-    ineligible(equipment): boolean {
-        if (this.holdFull() || this.exceedsMaxMass(equipment)) {
+    cargoCount(item): number {
+        let count = 0;
+        for (let i = 0; i < this.cargoHold.length; i++) {
+            if (this.cargoHold[i] === item) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    ineligible(item): boolean {
+        if (this.holdFull() || this.exceedsMaxMass(item) || this.cargoCount(item) === 2) {
             return true;
         } else {
             return false;

@@ -15,3 +15,7 @@ button.save {
     background-color: rgb(198, 223, 151);
     border-radius: 4px;
 }
+
+li.add-li {
+    line-height: 2em;
+}

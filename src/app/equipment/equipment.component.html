@@ -11,6 +11,8 @@
             <button class = "save" (click) = "saveEquip(updatedEquip.value, piece)">Save</button>
         </ng-template>
     </li>
+    <li class = "add-li">
+        <input #newEquip type="text" (keyup.enter)="addEquip(newEquip.value); newEquip.value = ''"/>&nbsp;
+        <button class = "add" (click)="addEquip(newEquip.value); newEquip.value = ''">Add</button>
+    </li>
 </ul>
-<input #newEquip type="text" (keyup.enter)="addEquip(newEquip.value); newEquip.value = ''"/> &nbsp;
-<button class = "add" (click)="addEquip(newEquip.value); newEquip.value = ''">Add</button>

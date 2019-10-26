@@ -10,6 +10,8 @@
                 <button class = "save" (click) = "saveExp(updatedExp.value, exp)">Save</button>
             </ng-template>
         </li>
-    </ul>
-    <input #newExp type="text" (keyup.enter)="addExp(newExp.value); newExp.value = ''"/> &nbsp;
-    <button class = "add" (click)="addExp(newExp.value); newExp.value = ''">Add</button>
+        <li class = "add-li">
+            <input #newExp type="text" (keyup.enter)="addExp(newExp.value); newExp.value = ''"/>&nbsp;
+            <button class = "add" (click)="addExp(newExp.value); newExp.value = ''">Add</button>
+        </li>
+</ul>

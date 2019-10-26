@@ -10,7 +10,9 @@
             <button class = "save" (click) = "saveCrew(updatedName.value, member)">Save</button>
         </ng-template>
     </li>
+    <li class = "add-li">
+        <input #newName type="text" (keyup.enter)="addCrew(newName.value, firstMission.checked); newName.value = ''"/><br>
+        <label><input #firstMission type="checkbox"/>First mission &nbsp;</label>
+        <button class = "add" (click)="addCrew(newName.value, firstMission.checked); newName.value = ''">Add</button>
+    </li>
 </ul>
-<input #newName type="text" (keyup.enter)="addCrew(newName.value, firstMission.checked); newName.value = ''"/>
-<label>&nbsp;<input #firstMission type="checkbox"/>First mission &nbsp;</label>
-<button class = "add" (click)="addCrew(newName.value, firstMission.checked); newName.value = ''">Add</button>

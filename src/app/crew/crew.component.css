@@ -1,0 +1,17 @@
+button.add {
+    border: none;
+    background-color: rgb(165, 229, 248);
+    border-radius: 4px;
+}
+
+button.remove {
+    border: none;
+    background-color: rgb(233, 192, 159);
+    border-radius: 4px;
+}
+
+button.save {
+    border: none;
+    background-color: rgb(204, 241, 169);
+    border-radius: 4px;
+}

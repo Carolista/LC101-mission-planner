@@ -15,13 +15,11 @@ h3 {
     text-align: center;
 }
 
-/* Add an 'active' class to style the background of the 'Add to Cargo Hold' buttons. */
+/* I did this the other way around and styled the button to have a background color already, and this changes it when it's disabled) */
 button:disabled, button[disabled] {
     background-color: rgb(209, 209, 209);
 }
 
-
-/* Add the 'nearMaxMass' class style here: */
 .nearMaxMass {
     font-weight: bold;
     color: rgb(194, 56, 32)

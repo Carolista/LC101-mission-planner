@@ -11,7 +11,6 @@ export class EquipmentComponent implements OnInit {
     pieceBeingEdited: string = null;
 
     equipment: string[] = ["sonic screwdriver", "hair spray", "coat"]; 
-
     constructor() { }
 
     ngOnInit() {

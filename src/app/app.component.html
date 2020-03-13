@@ -4,3 +4,9 @@
   <app-equipment></app-equipment>
   <app-experiments></app-experiments>
 </div>
+
+<!-- added in, probably needs to be moved -->
+<router-outlet></router-outlet>
+<h2><a [routerLink] = "'/crew'">View Crew Only</a></h2>
+<h2><a [routerLink] = "'/equipment'">View Equipment Only</a></h2>
+<h2><a [routerLink] = "'/experiments'">View Experiments Only</a></h2>
